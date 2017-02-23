@@ -62,3 +62,4 @@ crashlytics-build.properties
 
 # Node
 #node_modules/
+/.atomist/executors/*.js
