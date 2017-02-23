@@ -20,7 +20,7 @@ export let createIssue: Executor = {
     tags: ["atomist/intent=create issue", "atomist/private=false"],
     parameters: [
         { name: "title", description: "Issue Title", pattern: "^.*$", maxLength: 100, required: true },
-        { name: "comment", description: "Issue Comment", pattern: "@any", maxLength: 100, required: true },
+        { name: "comment", description: "Issue Comment", pattern: "@any", minLength: 0, maxLength: 100, required: false },
         Owner, Repository, RepoUserToken
     ],
     execute(services: Services, p: Parameters): Result {
